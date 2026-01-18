@@ -13,8 +13,8 @@ class MatriculaDisciplinaService
 
     def buscar_matricula_disciplina(key)
         @repositorio_matriculas_disciplinas.find do |matricula_disciplina|
-            matricula_disciplina.aluno.cod_matricula == key.aluno.cod_matricula &&
-            matricula_disciplina.disciplina.cod_disciplina == key.disciplina.cod_disciplina
+            matricula_disciplina.key.cod_matricula == key.cod_matricula &&
+            matricula_disciplina.key.cod_disciplina == key.cod_disciplina
         end
     end
 
