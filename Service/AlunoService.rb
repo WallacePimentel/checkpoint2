@@ -21,5 +21,9 @@ class AlunoService
 
     def remover_aluno(aluno)
         @repositorio_alunos.delete(aluno)
-    end  
+    end
+
+    def listar_alunos
+        @repositorio_alunos
+    end
 end
