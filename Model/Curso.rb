@@ -1,5 +1,7 @@
 class Curso
     attr_reader :cod_curso
+    attr_reader :disciplinas
+    attr_reader :alunos
     
     def initialize(cod_curso)
         @cod_curso = cod_curso

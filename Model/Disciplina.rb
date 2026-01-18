@@ -1,5 +1,5 @@
 class Disciplina
-
+    attr_reader :cod_disciplina
     attr_accessor :carga_horaria
     attr_accessor :curso
     
