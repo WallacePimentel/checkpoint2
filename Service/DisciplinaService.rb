@@ -18,4 +18,10 @@ class DisciplinaService
     def remover_disciplina(disciplina)
         @repositorio_disciplinas.delete(disciplina)
     end
+
+    def listar_disciplinas
+        @repositorio_disciplinas.each do |disciplina|
+            puts "Disciplina: #{disciplina.cod_disciplina} Carga Horária: #{disciplina.carga_horaria}"
+        end
+    end
 end

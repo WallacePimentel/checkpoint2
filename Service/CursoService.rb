@@ -22,4 +22,10 @@ class CursoService
     def remover_curso(curso)
         @repositorio_cursos.delete(curso)
     end
+
+    def listar_cursos
+        @repositorio_cursos.each do |curso|
+            puts "Curso: #{curso.cod_curso}"
+        end
+    end
 end

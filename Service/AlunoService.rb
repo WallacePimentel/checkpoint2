@@ -24,6 +24,8 @@ class AlunoService
     end
 
     def listar_alunos
-        @repositorio_alunos
+        @repositorio_alunos.each do |aluno|
+            puts "Aluno: #{aluno.cod_matricula}"
+        end
     end
 end

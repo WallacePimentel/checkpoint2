@@ -21,4 +21,10 @@ class MatriculaDisciplinaService
     def remover_matricula_disciplina(matricula_disciplina)
         @repositorio_matriculas_disciplinas.delete(matricula_disciplina)
     end
+
+    def listar_matriculas_disciplinas
+        @repositorio_matriculas_disciplinas.each do |matricula_disciplina|
+            puts "Matrícula: #{matricula_disciplina.key.cod_matricula}, Disciplina: #{matricula_disciplina.key.cod_disciplina} Nota: #{matricula_disciplina.nota} Ano/Semestre: #{matricula_disciplina.ano_semestre}"
+        end
+    end
 end
