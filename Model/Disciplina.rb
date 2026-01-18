@@ -8,3 +8,4 @@ class Disciplina
         @curso = curso
         @carga_horaria = carga_horaria
     end
+end

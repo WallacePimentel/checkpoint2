@@ -18,5 +18,6 @@ class Aluno
             puts disciplina
         end
     end
+end
 
     

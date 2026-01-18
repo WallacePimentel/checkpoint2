@@ -33,3 +33,4 @@ class Curso
     def remover_aluno(aluno)
         @alunos.delete(aluno)
     end
+end
