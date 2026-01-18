@@ -1,4 +1,8 @@
+require 'singleton'
+
 class MatriculaDisciplinaService
+    include Singleton
+
     def initialize
         @repositorio_matriculas_disciplinas = []
     end

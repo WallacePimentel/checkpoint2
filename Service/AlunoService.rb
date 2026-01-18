@@ -1,6 +1,13 @@
+require 'singleton'
+
 class AlunoService
-    def initialize(disciplina_service)
+    include Singleton
+
+    def initialize
         @repositorio_alunos = []
+    end
+
+    def configure(disciplina_service)
         @disciplina_service = disciplina_service
     end
 

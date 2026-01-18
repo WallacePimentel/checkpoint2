@@ -1,4 +1,8 @@
+require 'singleton'
+
 class DisciplinaService
+    include Singleton
+
     def initialize
         @repositorio_disciplinas = []
     end
