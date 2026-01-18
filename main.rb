@@ -48,3 +48,6 @@ CSV.foreach('notas.csv', headers: true) do |row|
         aluno.adicionar_matriculas_disciplina(matricula_disciplina)
     end
 end
+
+aluno_service.listar_cr_dos_alunos
+curso_service.listar_cr_dos_cursos
