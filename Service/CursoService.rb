@@ -28,4 +28,28 @@ class CursoService
             puts "Curso: #{curso.cod_curso}"
         end
     end
+
+    def calcular_cr_do_curso(curso)
+        total_alunos = curso.alunos.size
+        somatorio_CRs = 0.0
+
+        curso.alunos.each do |aluno|
+            cr_aluno = @aluno_service.calcular_cr(aluno)
+            somatorio_CRs += cr_aluno
+        end
+
+        if total_alunos == 0
+            return 0.0
+        end
+        somatorio_CRs / total_alunos
+    end
+
+    def listar_cr_dos_cursos
+        puts "------- O CR dos Cursos é -------"
+        @repositorio_cursos.each do |curso|
+            cr_curso = calcular_cr_do_curso(curso)
+            puts "#{curso.cod_curso} - #{cr_curso.round(0)}"
+        end
+        puts "----------------------------------"
+    end
 end
