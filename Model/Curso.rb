@@ -16,6 +16,10 @@ class Curso
         end
     end
 
+    def buscar_disciplina(disciplina)
+        @disciplinas.include?(disciplina)
+    end
+
     def remover_disciplina(disciplina)
         @disciplinas.delete(disciplina)
     end
@@ -28,6 +32,10 @@ class Curso
         @alunos.each do |aluno|
             puts aluno
         end
+    end
+
+    def buscar_aluno(aluno)
+        @alunos.include?(aluno)
     end
 
     def remover_aluno(aluno)

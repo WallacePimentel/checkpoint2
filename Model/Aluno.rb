@@ -1,4 +1,5 @@
 class Aluno
+    attr_reader :cod_matricula
 
     def initialize(cod_matricula)
         @cod_matricula = cod_matricula
@@ -11,6 +12,10 @@ class Aluno
 
     def remover_disciplina(disciplina)
         @disciplinas.delete(disciplina)
+    end
+
+    def buscar_disciplina(disciplina)
+        @disciplinas.include?(disciplina)
     end
 
     def listar_disciplinas
