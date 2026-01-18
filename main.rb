@@ -48,7 +48,3 @@ CSV.foreach('notas.csv', headers: true) do |row|
         aluno.adicionar_matriculas_disciplina(matricula_disciplina)
     end
 end
-
-aluno_service.listar_alunos.each do |aluno|
-    puts "Aluno: #{aluno.cod_matricula}"
-end
